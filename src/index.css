@@ -1,0 +1,69 @@
+@import "tailwindcss";
+@media (min-width: 375px) and (max-width: 640px) {
+  .app{
+    background-color: lightblue;
+  }
+  .none{display: none; }
+  .All{
+    justify-content: center;
+  }
+  .serach{
+    display: none;
+  }
+  .hi{
+    display: none;
+  }
+
+  .logo{
+    width: 150px;
+  }
+  .cenbtn{
+    gap: 5px;
+  }
+  .show{
+    display: inline;
+  }
+  .navbottom{
+    height: 210px;
+   
+    display: block; padding: 30px; 
+    }
+    .botinner{
+      margin-left: 0px;
+    }
+    .botinner h1{
+font-size: 35px;
+width: 100%;
+padding: 0 0 0 0;
+    }
+    .botsel{
+      left: 0; 
+      top: 0;
+      margin-left: 40px;
+    }
+  .procard{
+    width: 100%;
+  }
+  .line{
+    display: inline;
+    
+  }
+  .wid{
+    width: 370px; 
+  
+  
+    /* background-color: red; */
+  }
+  .pad{
+    
+  }
+  .block{
+    display: block;
+    padding-top: 20px;
+    height: 120vh;
+  }
+   .mart{
+    margin-top: 50px;
+   }
+
+}
