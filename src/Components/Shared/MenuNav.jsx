@@ -5,10 +5,10 @@ function MenuNav() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="relative">
+    <div className="relative lg:hidden">
       {/* Hamburger Icon - Sirf Mobile (md:hidden) par dikhega */}
       <div 
-        className="md:hidden text-2xl cursor-pointer" 
+        className=" text-2xl cursor-pointer" 
         onClick={() => setIsOpen(!isOpen)}
       >
         {isOpen ? <FaTimes /> : <FaBars />}
@@ -18,9 +18,9 @@ function MenuNav() {
       <div className={`
         fixed top-0 left-0 h-full w-[250px] bg-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out
         ${isOpen ? "translate-x-0" : "-translate-x-full"} 
-        md:relative md:translate-x-0 md:flex md:h-auto md:w-auto md:shadow-none md:bg-transparent
+      
       `}>
-        <ul className="flex flex-col md:flex-row gap-6 p-10 md:p-0 text-black">
+        <ul className="flex flex-col gap-6 p-10 md:p-0 text-black">
           <li className="font-semibold cursor-pointer">Home</li>
           <li className="font-semibold cursor-pointer">Categories</li>
           <li className="font-semibold cursor-pointer">Deals</li>

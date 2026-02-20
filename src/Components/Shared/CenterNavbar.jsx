@@ -9,11 +9,11 @@ import MenuNav from './MenuNav';
 function CenterNavbar() {
   const products = [
     {  name: "Wishlist" ,icon: <FaHeart /> },
-    {  name: "Login / Registe" ,icon:< FaUser/>},
+    {  name: "Login / Registe" , className:"hi ", icon:< FaUser/>},
     {  name: "Cart/ 411.76", icon: <FaShoppingCart /> }
   ];
   return (
-    <div className=" w-[98%] flex items-center justify-between"><div className="flex items-center gap-[50px]"><MenuNav/><Logo/><SearchBar/></div><div className="flex cenbtn gap-[20px]">
+    <div className=" w-[98%] flex items-center  gama justify-between  "><div className="flex items-center  gap-[50px]"><MenuNav/><Logo/><SearchBar/></div><div className="flex cenbtn gap-[20px]">
   {products
     .filter(item => item.id !== 2)
     .map(item => (
@@ -21,6 +21,7 @@ function CenterNavbar() {
         key={item.id}
         icon={item.icon}
         name={item.name}
+        className={item.className}
       />
     ))}
 </div></div>

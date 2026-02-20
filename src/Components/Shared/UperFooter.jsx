@@ -10,10 +10,10 @@ function UperFooter() {
   ];
 
   return (
-    <div className="w-[32%] b">
+    <div className="w-[100%] bg-amber-">
    
 
-      <div className="">
+      <div className=" flex uppf  gap-3">
           
         <FooterCard />
       </div>

@@ -2,7 +2,7 @@ import { FiSearch } from "react-icons/fi";
 
 function SearchBar() {
   return (
-    <div className="flex justify-center  serach sm:bg-amber-400 sm  ">
+    <div className="flex justify-center lg:flex md:hidden serach sm:bg-amber-400 sm  ">
       <div className="relative  ">
         <input
           type="text"

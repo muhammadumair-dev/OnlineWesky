@@ -2,31 +2,10 @@ import React from 'react'
 
 function FooterCard() {
   const FooterCard = [
-    {
-      id: 1,
-      title: "hi",
-      name: "Chivas Royal Salute 21 Years Old Richard Quinn Daisy Limited Edition 70cl",
-      price: "€235.29",
-      image: "https://www.onlinecava.com/wp-content/uploads/2026/01/W2258-150x150.jpg"
-    },
-    {
-      title: "hi",
-      id: 2,
-      name: "Smirnoff North Vodka 70cl",
-      price: "€16.72",
-      image: "https://www.onlinecava.com/wp-content/uploads/2026/01/W2258-150x150.jpg"
-    },
-    {
-      title: "hi",
-      id: 3,
-      name: "Mossburn Teaninich 14 Years Old 2008 Vintage Cask 70cl",
-      price: "€57.14",
-      image: "https://www.onlinecava.com/wp-content/uploads/2026/01/W2258-150x150.jpg"
-    },
-    {
-      id: 4,
-      name: "Chivas Royal Salute 21 Years Old Richard Quinn Orange Roses Limited Edition 70cl",
-      price: "€214.29",
+      {
+      id: 5,
+      name: "Moet Chandon Imperial Brut 75cl",
+      price: "€45.38",
       image: "https://www.onlinecava.com/wp-content/uploads/2026/01/W2258-150x150.jpg"
     },
     {
@@ -35,10 +14,28 @@ function FooterCard() {
       price: "€45.38",
       image: "https://www.onlinecava.com/wp-content/uploads/2026/01/W2258-150x150.jpg"
     },
+   {
+      id: 5,
+      name: "Moet Chandon Imperial Brut 75cl",
+      price: "€45.38",
+      image: "https://www.onlinecava.com/wp-content/uploads/2026/01/W2258-150x150.jpg"
+    },
+     {
+      id: 5,
+      name: "Moet Chandon Imperial Brut 75cl",
+      price: "€45.38",
+      image: "https://www.onlinecava.com/wp-content/uploads/2026/01/W2258-150x150.jpg"
+    },
     {
-      id: 6,
-      name: "Mossburn Royal Brackla 16 Years Old 2008 Vintage Cask 70cl",
-      price: "€92.44",
+      id: 5,
+      name: "Moet Chandon Imperial Brut 75cl",
+      price: "€45.38",
+      image: "https://www.onlinecava.com/wp-content/uploads/2026/01/W2258-150x150.jpg"
+    },
+     {
+      id: 5,
+      name: "Moet Chandon Imperial Brut 75cl",
+      price: "€45.38",
       image: "https://www.onlinecava.com/wp-content/uploads/2026/01/W2258-150x150.jpg"
     }
   ];
@@ -50,7 +47,7 @@ function FooterCard() {
         
         <div
           key={item.id}
-          className="w-1/3 wid  h-[80px] border-b border-gray-400 flex gap-5 "
+          className="w-1/3 wid pt-  h-[80px] flex gap-5 "
         >
           <div className="w-[70px] object-cover">
             <img className="w-[100%] h-[100%]" src={item.image} alt="" />

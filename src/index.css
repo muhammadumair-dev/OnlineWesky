@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@media (min-width: 375px) and (max-width: 640px) {
+@media (min-width: 360px) and (max-width: 640px) {
   .app{
     background-color: lightblue;
   }
@@ -15,18 +15,27 @@
   }
 
   .logo{
-    width: 150px;
+    width: 200px;
   }
   .cenbtn{
+
     gap: 5px;
   }
   .show{
     display: inline;
   }
+  .uppf{
+    height: 80vh;
+  }
+  .gama{
+    gap: 15px;
+    justify-content: center;
+  }
   .navbottom{
-    height: 210px;
-   
-    display: block; padding: 30px; 
+    height: 310px;
+  flex-direction: column;  
+    padding: 30px; 
+    align-items: center;
     }
     .botinner{
       margin-left: 0px;
@@ -39,10 +48,10 @@ padding: 0 0 0 0;
     .botsel{
       left: 0; 
       top: 0;
-      margin-left: 40px;
+      margin-left: 0px;
     }
   .procard{
-    width: 100%;
+    width: 45%;
   }
   .line{
     display: inline;
@@ -50,6 +59,7 @@ padding: 0 0 0 0;
   }
   .wid{
     width: 370px; 
+    padding-top:20px ;
   
   
     /* background-color: red; */
@@ -60,7 +70,7 @@ padding: 0 0 0 0;
   .block{
     display: block;
     padding-top: 20px;
-    height: 120vh;
+    height: 95vh;
   }
    .mart{
     margin-top: 50px;

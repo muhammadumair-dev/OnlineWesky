@@ -10,7 +10,7 @@ function CategoryDropdown({ selectname, name }) {
 
   return (
     <div 
-      className="relative w-fit mx-2"
+      className="relative md:hidden w-fit mx-2"
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => { setOpen(false); setHoveredItem(null); }}
     >

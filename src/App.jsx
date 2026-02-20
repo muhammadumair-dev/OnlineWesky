@@ -98,7 +98,7 @@ const CardPro = [
 ];
 
   return (
-    <div className=' bg-white overflow-hidden xs:bg-red-500 md:bg-amber-400 sm:bg-amber-950  ' ><Navbar/><NavbarSelecter/><NavbarBottom/>
+    <div className=' bg-white overflow-hidden xs:bg-red-500 lg:bg-red-200 md:bg-amber-400 sm:bg-amber-950  ' ><Navbar/><NavbarSelecter/><NavbarBottom/>
       <div className="flex">
         <div className="leftbar w-[80%]"><HeroRight/></div>
         <div>
