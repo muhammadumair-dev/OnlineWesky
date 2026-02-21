@@ -14,7 +14,7 @@ function FooterCenter() {
   ];
 
   return (
-    <div className="h-[320px] py-[50px] block  flex justify-between text-white bg-[url('https://www.onlinecava.com/wp-content/uploads/2020/05/onlinecava-footer.jpg')] bg-cover bg-center px-4">
+    <div className="h-[320px] lg:h-[400px] py-[50px] block  flex justify-between text-white bg-[url('https://www.onlinecava.com/wp-content/uploads/2020/05/onlinecava-footer.jpg')] bg-cover bg-center px-4">
 
       {/* Left Section */}
       <div className="w-[48%] wid">

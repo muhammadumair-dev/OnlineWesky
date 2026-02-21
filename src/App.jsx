@@ -99,8 +99,8 @@ const CardPro = [
 
   return (
     <div className=' bg-white overflow-hidden xs:bg-red-500 lg:bg-red-200 md:bg-amber-400 sm:bg-amber-950  ' ><Navbar/><NavbarSelecter/><NavbarBottom/>
-      <div className="flex">
-        <div className="leftbar w-[80%]"><HeroRight/></div>
+      <div className="flex xl:gap-10">
+        <div className="leftbar xl:w-[30%]  w-[80%]"><HeroRight/></div>
         <div>
           <CartProvider>
       <div className="flex">

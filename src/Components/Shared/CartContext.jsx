@@ -36,7 +36,7 @@ function CartProvider({ children }) {
   };
 
   return (
-<div >    <CartContext.Provider value={{ cart, setCart, addToCart, removeItem, updateQuantity, isVisible, setIsVisible }}>
+<div claasName="" >    <CartContext.Provider value={{ cart, setCart, addToCart, removeItem, updateQuantity, isVisible, setIsVisible }}>
       {children}
     </CartContext.Provider>
 </div>

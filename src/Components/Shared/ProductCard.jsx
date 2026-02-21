@@ -17,7 +17,7 @@ function ProductCard({ product }) {
   };
 
   return (
-    <div className="w-59 procard overflow-hidden  relative group">
+    <div className="xl:w-50 w-40  procard overflow-hidden  relative group">
       <div className="relative   ">
         <img src={product.image} alt={product.name} className="h-fit w-full object-cover" />
         
