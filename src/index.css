@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@media (min-width: 360px) and (max-width: 640px) {
+@media (min-width: 344px) and (max-width: 640px) {
   .app{
     background-color: lightblue;
   }
@@ -29,8 +29,10 @@
   }
   .gama{
     gap: 15px;
+ 
     justify-content: center;
   }
+
   .navbottom{
     height: 310px;
   flex-direction: column;  
@@ -51,15 +53,18 @@ padding: 0 0 0 0;
       margin-left: 0px;
     }
   .procard{
-    width: 45%;
+    width: 48%; 
+
+  
   }
   .line{
     display: inline;
     
   }
   .wid{
-    width: 370px; 
+    width: 100%; 
     padding-top:20px ;
+  
   
   
     /* background-color: red; */

@@ -13,7 +13,7 @@ function UperFooter() {
     <div className="w-[100%] bg-amber-">
    
 
-      <div className=" flex uppf  gap-3">
+      <div className=" flex md:flex-wrap uppf  md:h-fit gap-5">
           
         <FooterCard />
       </div>

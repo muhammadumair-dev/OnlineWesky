@@ -98,13 +98,14 @@ const CardPro = [
 ];
 
   return (
-    <div className=' bg-white overflow-hidden xs:bg-red-500 lg:bg-red-200 md:bg-amber-400 sm:bg-amber-950  ' ><Navbar/><NavbarSelecter/><NavbarBottom/>
-      <div className="flex xl:gap-10">
-        <div className="leftbar xl:w-[30%]  w-[80%]"><HeroRight/></div>
+    <div className=' bg-white overflow-hidden   ' ><Navbar/><NavbarSelecter/><NavbarBottom/>
+      <div className="flex  xl:gap-10">
+        <div className="leftbar hi  md:hidden lg:inline xl:w-[30%]  w-[80%]"><HeroRight/></div>
         <div>
           <CartProvider>
-      <div className="flex">
-        <div className="flex-1 flex gap-4 flex-wrap">
+      <div className="flex  p-2">
+        <div className="flex-1  lg:gap-2  flex gap-2.5 md:gap-1 
+flex-wrap">
           {CardPro.map((item) => (
             <ProductCard key={item.id} product={item} />
           ))}

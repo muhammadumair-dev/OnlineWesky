@@ -14,10 +14,10 @@ function FooterCenter() {
   ];
 
   return (
-    <div className="h-[320px] lg:h-[400px] py-[50px] block  flex justify-between text-white bg-[url('https://www.onlinecava.com/wp-content/uploads/2020/05/onlinecava-footer.jpg')] bg-cover bg-center px-4">
+    <div className="h-[320px] py-[50px] block lg:flex md:block md:h-fit flex justify-between text-white bg-[url('https://www.onlinecava.com/wp-content/uploads/2020/05/onlinecava-footer.jpg')] bg-cover bg-center px-4">
 
       {/* Left Section */}
-      <div className="w-[48%] wid">
+      <div className="w-[48%] lg:w-[40%]  md:w-[100%] wid">
         <h1 className="text-2xl font-bold mb-4">About us</h1>
 
         <p className="text-sm mb-6">
@@ -43,7 +43,7 @@ function FooterCenter() {
       </div>
 
       {/* Right Section */}
-      <div className="w-[50%] wid mart">
+      <div className="w-[50%]  lg:w-[50%] md:w-[100%] wid mart">
         <h1 className="text-2xl font-bold mb-4">FILTER BY</h1>
         <div>
           <Frightbtn/>

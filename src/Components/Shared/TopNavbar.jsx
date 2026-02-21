@@ -5,7 +5,7 @@ function TopNavbar() {
     return (
         <div className="flex All lg:justify-between md:justify-center justify-between p-1 w-[98%] ">
             <div><strong class="uppercase font-medium text-[13px] text-[#121212D9] ">All you Need in Alcohol</strong></div>
-            <div className="none lg:inline md:hidden sm:bg-amber-600">
+            <div className="none lg:inline md:hidden ">
                 <ul className="flex none  gap-5 text-[#9F9F9F] font-normal text-[15px]">
                     <li><a href=""  className=" hover:text-[#121212D9] ">About Us</a></li>
                     <li><a href="" className=" hover:text-[#121212D9] ">Contact</a></li>
