@@ -17,10 +17,17 @@ function ProductCard({ product }) {
   };
 
   return (
-    <div className="w-[50%] h-85 sm:h-fit nine sm:w-48 xl:w-50 lg:w-42 lg:gap-00 md:w-62 procard overflow-hidden relative">
+    <div className="w-[50%] mt-8 h-85 sm:h-fit nine sm:w-48 xl:w-50 lg:w-42 lg:gap-00 md:w-62 procard overflow-hidden relative">
       <div className="relative ">
         <img src={product.image} alt={product.name} className="h-[200px] sm:h-fit w-full bg-center bg-cover object-cover" />
-        
+
+      <div className=" absolute w-full top-0 left- flex justify-end ">
+            <button
+        className="p-2.5  border-gray-400 border text-gray-400 rounded-full"
+        >
+          <FaHeart/>
+        </button>
+      </div>
         {/* Overlay on hover */}
         <div className="absolute  inset-0 bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center ">
           <button className="w-full  text-white px-8 py-2 font-bold  hover:bg-yellow-700">
@@ -28,13 +35,9 @@ function ProductCard({ product }) {
           </button>
         </div>
 
+
         {/* Heart icon */}
-        <button
-          onClick={toggleWishlist}
-          className="absolute top-4 right-4 text-white text-2xl transition-transform hover:scale-110"
-        >
-          <FaHeart fill={isWishlisted ? "currentColor" : "none"} />
-        </button>
+      
       </div>
 
       <div className="p-4 bg-white">

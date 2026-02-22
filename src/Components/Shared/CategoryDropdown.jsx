@@ -3,37 +3,33 @@ import { FaChevronDown } from "react-icons/fa";
 
 function CategoryDropdown({ selectname, name }) {
   const [open, setOpen] = useState(false);
-  const [hoveredItem, setHoveredItem] = useState(null);
-
-  // fallback to empty array if no options
-  const options = name || [];
 
   return (
-    <div 
-      className="relative lg:inline xl:inline md:hidden w-fit mx-2"
-      onMouseEnter={() => setOpen(true)}
-      onMouseLeave={() => { setOpen(false); setHoveredItem(null); }}
-    >
-      {/* Top Button */}
-      <div className="flex items-center cursor-pointer border-b-2 border-transparent hover:border-yellow-500 transition-all">
-        <h2 className="text-[14px] font-medium">{selectname}</h2>
-        {options.length > 0 && (
-          <FaChevronDown 
-            className={`text-[10px] text-gray-400 ml-1 transition-transform duration-300 ${open ? 'rotate-180' : ''}`} 
+    <div className="w-[150px] flex  ">
+      
+      {/* Title */}
+      <div
+        onClick={() => setOpen(!open)}
+        className="flex items-center gap-[10px] justify-between cursor-pointer py-2 border-b border-gray-300"
+      >
+        <h2 className="text-[14px]  font-medium">{selectname}</h2>
+
+        {name && (
+          <FaChevronDown
+            className={`text-[12px] transition-transform duration-300 ${
+              open ? "rotate-180" : ""
+            }`}
           />
         )}
       </div>
 
-      {/* Dropdown Box */}
-      {open && options.length > 0 && (
-        <div className="absolute top-10 left-0 w-48 bg-gray-100 shadow-lg rounded-md p-2 z-50">
-          {options.map((item, index) => (
+      {/* Dropdown Items */}
+      {open && name && (
+        <div className="mt-2 bg-gray-100 rounded-md">
+          {name.map((item, index) => (
             <div
               key={index}
-              className={`py-2 px-2 rounded-md cursor-pointer transition-colors duration-200 
-                          ${hoveredItem === item ? 'bg-yellow-100 text-yellow-600' : 'text-gray-800'}`}
-              onMouseEnter={() => setHoveredItem(item)}
-              onMouseLeave={() => setHoveredItem(null)}
+              className="py-2 px-3 text-sm hover:bg-yellow-500 hover:text-black cursor-pointer transition-all"
             >
               {item}
             </div>

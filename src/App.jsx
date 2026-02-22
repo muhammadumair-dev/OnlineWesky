@@ -8,6 +8,7 @@ import ProductCard from './Components/Shared/ProductCard';
 import Footer from './Components/Layout/Footer';
 import ScrollToTopButton from './Components/Widgets/ScrollToTopButton';
 import HeroRight from './Components/Widgets/HeroRight';
+import Sidebar from './Components/Layout/Sidebar';
 
 function  App() {
 const CardPro = [
@@ -98,12 +99,15 @@ const CardPro = [
 ];
 
   return (
-    <div className='sm:bg-amber-400 md:bg-red-500 bg-white overflow-hidden   ' ><Navbar/><NavbarSelecter/><NavbarBottom/>
+    <div className=' bg-white overflow-hidden   ' ><Navbar/><NavbarSelecter/><NavbarBottom/>
       <div className="flex xl:gap-10">
-        <div className="leftbar hidden   md:hidden lg:inline xl:w-[30%]  w-[80%]"><HeroRight/></div>
+        <div className="leftbar hidden   md:hidden lg:inline xl:w-[30%]  w-[80%]">
+        <Sidebar/>
+          <HeroRight/></div>
         <div className="">
+          
           <CartProvider>
-      <div className="flex mt-5">
+      <div className="flex  mt-5">
         <div className="flex-1  lg:gap-2 flex  justify-center  md:gap-1 
 flex-wrap">
           {CardPro.map((item) => (
