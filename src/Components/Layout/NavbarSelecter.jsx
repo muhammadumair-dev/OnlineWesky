@@ -49,7 +49,7 @@ function NavbarSelecter() {
   ];
 
   return (
-    <div className="bg-[#F4F4F4] hi py-3 px-2">
+    <div className="bg-[#F4F4F4]  py-3 px-2">
       <div className="flex">
         {drinks.map((item) => (
           <CategoryDropdown 

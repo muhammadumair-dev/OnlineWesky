@@ -25,7 +25,7 @@
     display: inline;
   }
   .uppf{
-    height: 80vh;
+    height: 70vh;
   }
   .gama{
     gap: 15px;
@@ -73,12 +73,19 @@ padding: 0 0 0 0;
     
   }
   .block{
+    margin-top: 100px;
     display: block;
     padding-top: 20px;
-    height: 105vh;
+    height: fit-content;
   }
    .mart{
     margin-top: 50px;
    }
 
+}
+@media(min-width:912px){
+  .nine{
+    width: 250px;
+  }
+  
 }
