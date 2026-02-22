@@ -1,35 +1,61 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaChevronDown } from "react-icons/fa";
 
 function CategoryDropdown({ selectname, name }) {
   const [open, setOpen] = useState(false);
+  const [hoveredItem, setHoveredItem] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  const options = name || [];
+
+  // Detect screen size
+  useEffect(() => {
+    const checkScreen = () => {
+      setIsMobile(window.innerWidth < 1024); // lg breakpoint
+    };
+
+    checkScreen();
+    window.addEventListener("resize", checkScreen);
+
+    return () => window.removeEventListener("resize", checkScreen);
+  }, []);
 
   return (
-    <div className="w-[150px] flex  ">
-      
-      {/* Title */}
+    <div
+      className="relative  lg:inline xl:inline md:hidden w-fit mx-2"
+      onMouseEnter={() => !isMobile && setOpen(true)}
+      onMouseLeave={() => !isMobile && (setOpen(false), setHoveredItem(null))}
+    >
+      {/* Top Button */}
       <div
-        onClick={() => setOpen(!open)}
-        className="flex items-center gap-[10px] justify-between cursor-pointer py-2 border-b border-gray-300"
+        className="flex items-center cursor-pointer border-b-2 border-transparent hover:border-yellow-500 transition-all"
+        onClick={() => isMobile && setOpen(!open)}
       >
-        <h2 className="text-[14px]  font-medium">{selectname}</h2>
+        <h2 className="text-[14px] font-medium">{selectname}</h2>
 
-        {name && (
+        {options.length > 0 && (
           <FaChevronDown
-            className={`text-[12px] transition-transform duration-300 ${
+            className={`text-[10px] text-gray-400 ml-1 transition-transform duration-300 ${
               open ? "rotate-180" : ""
             }`}
           />
         )}
       </div>
 
-      {/* Dropdown Items */}
-      {open && name && (
-        <div className="mt-2 bg-gray-100 rounded-md">
-          {name.map((item, index) => (
+      {/* Dropdown Box */}
+      {open && options.length > 0 && (
+        <div className="absolute top-10 left-0 w-48 bg-gray-100 shadow-lg rounded-md p-2 z-50">
+          {options.map((item, index) => (
             <div
               key={index}
-              className="py-2 px-3 text-sm hover:bg-yellow-500 hover:text-black cursor-pointer transition-all"
+              className={`py-2 px-2 rounded-md cursor-pointer transition-colors duration-200 
+              ${
+                hoveredItem === item
+                  ? "bg-yellow-100 text-yellow-600"
+                  : "text-gray-800"
+              }`}
+              onMouseEnter={() => !isMobile && setHoveredItem(item)}
+              onMouseLeave={() => !isMobile && setHoveredItem(null)}
             >
               {item}
             </div>

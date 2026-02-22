@@ -49,8 +49,8 @@ function NavbarSelecter() {
   ];
 
   return (
-    <div className=" lg:inline hidden py-3 ">
-      <div className="flex ">
+    <div className=" lg:inline bg-amber-400 hidden py-3 ">
+      <div className="flex bg-[#F4F4F4] h-[50px] items-center ">
         {drinks.map((item) => (
           <CategoryDropdown 
             key={item.id} 
