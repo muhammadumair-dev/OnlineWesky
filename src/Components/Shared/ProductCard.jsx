@@ -17,7 +17,7 @@ function ProductCard({ product }) {
   };
 
   return (
-    <div className="w-[170px] h-85 sm:h-fit nine sm:w-48 xl:w-50 lg:w-42 lg:gap-00 md:w-62 procard overflow-hidden relative">
+    <div className="w-[50%] h-85 sm:h-fit nine sm:w-48 xl:w-50 lg:w-42 lg:gap-00 md:w-62 procard overflow-hidden relative">
       <div className="relative ">
         <img src={product.image} alt={product.name} className="h-[200px] sm:h-fit w-full bg-center bg-cover object-cover" />
         

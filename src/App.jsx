@@ -103,8 +103,8 @@ const CardPro = [
         <div className="leftbar hidden   md:hidden lg:inline xl:w-[30%]  w-[80%]"><HeroRight/></div>
         <div className="">
           <CartProvider>
-      <div className="flex  sm:mt-5">
-        <div className="flex-1  lg:gap-2 flex gap-3 justify-center  md:gap-1 
+      <div className="flex mt-5">
+        <div className="flex-1  lg:gap-2 flex  justify-center  md:gap-1 
 flex-wrap">
           {CardPro.map((item) => (
             <ProductCard key={item.id} product={item} />
