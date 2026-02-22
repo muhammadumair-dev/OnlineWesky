@@ -17,9 +17,9 @@ function ProductCard({ product }) {
   };
 
   return (
-    <div className="w-1/2 nine sm:w-48 xl:w-50 lg:w-42 lg:gap-00 md:w-62 procard overflow-hidden relative">
-      <div className="relative group">
-        <img src={product.image} alt={product.name} className="h-[280px] bg-center bg-cover w-full object-cover" />
+    <div className="w-[170px] h-85 sm:h-fit nine sm:w-48 xl:w-50 lg:w-42 lg:gap-00 md:w-62 procard overflow-hidden relative">
+      <div className="relative ">
+        <img src={product.image} alt={product.name} className="h-[200px] sm:h-fit w-full bg-center bg-cover object-cover" />
         
         {/* Overlay on hover */}
         <div className="absolute  inset-0 bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center ">

@@ -35,13 +35,13 @@ function FooterCard() {
   ];
 
   return (
-    <div className=" flex md:block xl:flex  md:h-fit   flex-wrap  line w-screen px-3 items-center my-[26px] p-[25px] bg-[#F9F9F9] h-[250px]">
+    <div className=" inline md:block xl:flex  md:h-fit   flex-wrap  line w-screen px-3 items-center my-[26px] p-[25px]  h-[250px]">
      
       {FooterCard.map((item) => (
         
         <div
           key={item.id}
-          className="w-1/3 wid  pt xl:w-1/3    md:w-[100%] md:pt-[20px] flex gap-5 "
+          className="w-[100%] wid  pt-3.5 xl:w-1/3    md:w-[100%] md:pt-[20px] flex gap-5 "
         >
           <div className="w-[70px]  object-cover">
             <img className="w-[100%] h-[100%]" src={item.image} alt="" />

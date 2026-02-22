@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@media (min-width: 344px) and (max-width: 640px) {
+/* @media (min-width: 344px) and (max-width: 640px) {
   .app{
     background-color: lightblue;
   }
@@ -67,8 +67,7 @@ padding: 0 0 0 0;
   
   
   
-    /* background-color: red; */
-  }
+    /* background-color: red; 
   .pad{
     
   }
@@ -88,4 +87,4 @@ padding: 0 0 0 0;
     width: 250px;
   }
   
-}
+} */
