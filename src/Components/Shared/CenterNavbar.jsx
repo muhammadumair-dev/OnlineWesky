@@ -13,7 +13,7 @@ function CenterNavbar() {
     {  name: "Cart/ 411.76", icon: <FaShoppingCart /> }
   ];
   return (
-    <div className=" w-[96%] lg:justify-between flex items-center sm:justify-center  h-fit md:w-full justify-between  gap-0 sm:gap-[180px]"><div className="flex items-center  justify-between  w-[70%]  md:w-[470px] "><MenuNav/><Logo/><SearchBar/></div><div className="flex w-[30%] sm:gap-5 gap-[5px]">
+    <div className=" w-[96%] lg:justify-between flex items-center sm:justify-center  h-fit md:w-full justify-between  gap-0 sm:gap-[180px]"><div className="flex items-center  justify-between  w-[67%]    "><MenuNav/><Logo/><SearchBar/></div><div className="flex  m:gap-5 gap-[5px]">
   {products
     .filter(item => item.id !== 2)
     .map(item => (
