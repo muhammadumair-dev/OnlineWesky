@@ -184,7 +184,7 @@ const CardPro = [
   return (
     <div className=' bg-white overflow-hidden   ' ><Navbar/><NavbarSelecter/><NavbarBottom/>
       <div className="flex xl:gap-10">
-        <div className="leftbar hidden   md:hidden lg:inline xl:w-[30%]  w-[80%]">
+        <div className=" hidden   md:hidden lg:inline xl:w-[30%]  w-[80%]">
         <Sidebar/>
           <HeroRight/></div>
         <div className="">

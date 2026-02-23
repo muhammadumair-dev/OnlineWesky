@@ -4,7 +4,7 @@ import CenterNavbar from '../Shared/CenterNavbar'
 
 function Navbar() {
   return (
-    <div className="flex flex-col items-center h-[120px]"><TopNavbar/>
+    <div className="flex flex-col items-center h-fit"><TopNavbar/>
     <CenterNavbar/>
     </div>
   )

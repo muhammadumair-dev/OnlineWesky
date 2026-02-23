@@ -52,7 +52,7 @@ function MenuNav() {
       {/* Hamburger Button */}
       <button
         onClick={() => setIsOpen(true)}
-        className="text-2xl p-2 text-gray-700"
+        className="text-[20px] sm:text-[28px]  text-gray-700"
       >
         <FaBars />
       </button>
