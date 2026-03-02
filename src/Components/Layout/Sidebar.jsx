@@ -32,7 +32,7 @@ const categories = [
 
 const Sidebar = () => {
   return (
-    <aside className="w-full max-w-[260px] p-4 bg-white">
+    <aside className="w-full max-w-[250px] lg:inline hidden p-4 ">
       <section className="mb-8">
         <h2 className="text-[14px] font-bold uppercase tracking-wider mb-1">Browse Categories</h2>
         <div className="w-8 h-[2px] bg-gray-200 mb-4"></div>

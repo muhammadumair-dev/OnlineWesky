@@ -1,20 +1,39 @@
-import React from 'react'
+import React, { useState } from "react";
 import { CgMail } from "react-icons/cg";
+import { Link } from 'react-router-dom'
+import NewsletterModal from '../Widgets/NewsletterModal';
 
 function TopNavbar() {
-    return (
-        <div className="flex All lg:justify-between md:justify-center  justify-center p-1 w-[98%] ">
-            <div><strong class="uppercase font-medium text-[13px] text-[#121212D9] ">All you Need in Alcohol</strong></div>
-            <div className=" ">
-                <ul className="lg:flex hidden  gap-5 text-[#9F9F9F] font-normal text-[15px]">
-                    <li><a href=""  className=" hover:text-[#121212D9] ">About Us</a></li>
-                    <li><a href="" className=" hover:text-[#121212D9] ">Contact</a></li>
-                    <li><a href="" className=" hover:text-[#121212D9] ">FAQs</a></li>
-                    <li><a href="" className="flex items-center gap-1  hover:text-[#121212D9]"><CgMail />Newsletter</a></li>
-                </ul>
-            </div>
-        </div>
-    )
+  const [isNewsletterOpen, setIsNewsletterOpen] = useState(false);
+
+  return (
+    <div className="flex lg:justify-between justify-center p-1 w-[98%]">
+
+      <strong className="uppercase font-medium text-[13px]">
+        All you Need in Alcohol
+      </strong>
+
+      <ul className="lg:flex hidden gap-5 text-[#9F9F9F]">
+
+        <li>
+          <Link to="/about">About Us</Link>
+        </li>
+
+        <li><Link to="/contact">Contact</Link></li>
+        <li><Link to="/faqs">FAQs</Link></li>
+
+        <li>
+          <button onClick={() => setIsNewsletterOpen(true)} className="flex items-center gap-1 text-[#9F9F9F] hover:text-amber-500">
+            <CgMail /> Newsletter
+          </button>
+        </li>
+
+      </ul>
+
+      <NewsletterModal isOpen={isNewsletterOpen} onClose={() => setIsNewsletterOpen(false)} />
+
+    </div>
+  );
 }
 
-export default TopNavbar
+export default TopNavbar;

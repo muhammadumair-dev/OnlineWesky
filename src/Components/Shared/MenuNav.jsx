@@ -2,16 +2,14 @@ import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import CategoryDropdown from "./CategoryDropdown";
 import SearchBar from "../Widgets/SearchBar";
+import { Link } from 'react-router-dom';
 
 function MenuNav() {
   const [isOpen, setIsOpen] = useState(false);
 
   const drinks = [
-    { 
-      id: 1, 
-      selectname: "Gift Ideas", 
-      options: ["Wine", "Champagne", "Sparkling Wine"] 
-    },
+    { id: 1, selectname: "Gift Ideas", options: ["Wine", "Special Packages", "Gift Card"] }
+    ,
     { 
       id: 2, 
       selectname: "New In"
@@ -84,11 +82,30 @@ function MenuNav() {
         {/* Menu Content */}
         <div className="p-4 space-y-4">
           {drinks.map((item) => (
-            <CategoryDropdown
-              key={item.id}
-              selectname={item.selectname}
-              name={item.options}
-            />
+            <div key={item.id} className="">
+              <Link
+                to={`/${item.selectname.toLowerCase().replace(/\s+/g,'-')}`}
+                className="block py-2 font-medium text-gray-800"
+                onClick={() => setIsOpen(false)}
+              >
+                {item.selectname}
+              </Link>
+
+              {item.options && item.options.length > 0 && (
+                <div className="pl-4">
+                  {item.options.map((opt, i) => (
+                    <Link
+                      key={i}
+                      to={`/${opt.toLowerCase().replace(/\s+/g,'-')}`}
+                      className="block py-1 text-sm text-gray-600"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {opt}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           ))}
         </div>
 

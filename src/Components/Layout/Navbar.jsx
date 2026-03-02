@@ -1,10 +1,11 @@
 import React from 'react'
 import TopNavbar from '../Shared/TopNavbar'
 import CenterNavbar from '../Shared/CenterNavbar'
+import NavbarBottom from './NavbarBottom'
 
 function Navbar() {
   return (
-    <div className="flex flex-col items-center h-fit"><TopNavbar/>
+    <div className="flex flex-col items-center h-fit"><TopNavbar  />
     <CenterNavbar/>
     </div>
   )

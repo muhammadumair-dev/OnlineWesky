@@ -31,6 +31,12 @@ function FooterCard() {
       name: "Moet Chandon Imperial Brut 75cl",
       price: "€45.38",
       image: "https://www.onlinecava.com/wp-content/uploads/2026/01/W2258-150x150.jpg"
+    },
+    {
+      id: 5,
+      name: "Moet Chandon Imperial Brut 75cl",
+      price: "€45.38",
+      image: "https://www.onlinecava.com/wp-content/uploads/2026/01/W2258-150x150.jpg"
     }
   ];
 
