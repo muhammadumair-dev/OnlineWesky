@@ -1,7 +1,7 @@
 
 import About from './About'
 import Coninner from './Coninner'
-import Contight from './conright'
+import Contight from './Conright'
 
 function Contact() {
   return (
