@@ -42,7 +42,7 @@ function ProductCard({ product }) {
 
       <div className="p-4 bg-white">
         <h2 className="font-bold text-sm">{product.name}</h2>
-        <p className="text-gray-600 text-sm">Rs: {product.price}</p>
+        <p className="text-gray-600 text-sm">€ {product.price}</p>
 
         <button
           onClick={handleAddToCart}
