@@ -32,7 +32,7 @@ function CartPage() {
                       <img src={item.image} alt={item.name} className="w-16 h-16 object-cover" />
                       <span>{item.name}</span>
                     </td>
-                    <td className="py-4">€{item.price.toFixed(2)}</td>
+                    <td className="py-4"><span className="text-[15px]">€</span>{item.price.toFixed(2)}</td>
                     <td className="py-4">
                       <div className="flex items-center">
                         <button
@@ -50,7 +50,7 @@ function CartPage() {
                         </button>
                       </div>
                     </td>
-                    <td className="py-4">€{(item.price * item.quantity).toFixed(2)}</td>
+                    <td className="py-4"><span className="text-[15px]">€</span>{(item.price * item.quantity).toFixed(2)}</td>
                     <td className="py-4">
                       <button onClick={() => removeItem(item.id)} className="text-red-500">×</button>
                     </td>
@@ -66,11 +66,11 @@ function CartPage() {
             <h2 className="font-bold text-lg mb-4">Cart Totals</h2>
             <div className="flex justify-between mb-2">
               <span>Subtotal</span>
-              <span>€{subtotal.toFixed(2)}</span>
+              <span><span className="text-[15px]">€</span>{subtotal.toFixed(2)}</span>
             </div>
             <div className="flex justify-between font-bold mb-4">
               <span>Total</span>
-              <span>€{subtotal.toFixed(2)}</span>
+              <span><span className="text-[15px]">€</span>{subtotal.toFixed(2)}</span>
             </div>
             <button className="w-full bg-yellow-600 text-white py-2 mb-2">Proceed to Checkout</button>
             <div className="mb-4">

@@ -47,11 +47,11 @@ function App() {
   const Home = () => (
     <div>
       <div className="flex ">
-        <div className="pl-2">
+        <div className="pl-2 hidden xl:inline">
           <Sidebar />
           <HeroRight />
         </div>
-        <div className="flex flex-wrap">
+        <div className="flex flex-wrap gap-2 justify-center">
           {CardPro.map((item) => (
             <ProductCard key={item.id} product={item} />
           ))}

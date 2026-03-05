@@ -29,7 +29,7 @@ function CartPanel() {
 
           <div className="flex-1">
             <h2 className="text-sm font-semibold">{item.name}</h2>
-            <p className="text-gray-500">{item.quantity} × € {item.price}</p>
+            <p className="text-gray-500">{item.quantity} × <span className="text-[14px]">€</span>{item.price}</p>
           </div>
 
           <button

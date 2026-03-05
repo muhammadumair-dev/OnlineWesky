@@ -17,11 +17,15 @@ function ProductCard({ product }) {
   };
 
   return (
-    <div className="w-[50%] mt-8 h-85 sm:h-fit nine sm:w-48 xl:w-58 lg:w-42 lg:gap-00 md:w-62 procard overflow-hidden relative">
-      <div className="relative ">
-        <img src={product.image} alt={product.name} className="h-[200px] sm:h-fit w-full bg-center bg-cover object-cover" />
+    <div className="w-[48%]  mt-8 overflow-hidden relative procard sm:w-48 md:w-62 lg:w-48 xl:w-55">
+      <div className="relative w-full aspect-square overflow-hidden ">
+        <img
+          src={product.image}
+          alt={product.name}
+          className="absolute inset-0 w-full h-full object-cover  "
+        />
 
-      <div className=" absolute w-full top-0 left- flex justify-end ">
+      <div className=" absolute w-full top-0  flex justify-end ">
             <button
         className="p-2.5  border-gray-400 border text-gray-400 rounded-full"
         >
@@ -41,8 +45,8 @@ function ProductCard({ product }) {
       </div>
 
       <div className="p-4 bg-white">
-        <h2 className="font-bold text-sm">{product.name}</h2>
-        <p className="text-gray-600 text-sm">€ {product.price}</p>
+        <h2 className="font-bold text-sm truncate" title={product.name}>{product.name}</h2>
+        <p className="text-gray-600 text-sm"><span className="text-[14px]">€</span>{product.price}</p>
 
         <button
           onClick={handleAddToCart}

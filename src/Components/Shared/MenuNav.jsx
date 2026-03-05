@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes, FaChevronDown } from "react-icons/fa";
 import CategoryDropdown from "./CategoryDropdown";
 import SearchBar from "../Widgets/SearchBar";
 import { Link } from 'react-router-dom';
 
 function MenuNav() {
   const [isOpen, setIsOpen] = useState(false);
+  const [expandedId, setExpandedId] = useState(null);
 
   const drinks = [
     { id: 1, selectname: "Gift Ideas", options: ["Wine", "Special Packages", "Gift Card"] }
@@ -45,7 +46,7 @@ function MenuNav() {
   ];
 
   return (
-    <div className="lg:hidden">
+    <div className="lg:hidden ">
 
       {/* Hamburger Button */}
       <button
@@ -83,21 +84,41 @@ function MenuNav() {
         <div className="p-4 space-y-4">
           {drinks.map((item) => (
             <div key={item.id} className="">
-              <Link
-                to={`/${item.selectname.toLowerCase().replace(/\s+/g,'-')}`}
-                className="block py-2 font-medium text-gray-800"
-                onClick={() => setIsOpen(false)}
+              <div
+                className="flex justify-between items-center py-2"
               >
-                {item.selectname}
-              </Link>
+                <Link
+                  to={`/${item.selectname.toLowerCase().replace(/\s+/g,'-')}`}
+                  className="flex-1 font-medium text-gray-800 hover:text-gray-600"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.selectname}
+                </Link>
+                {item.options && item.options.length > 0 && (
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      setExpandedId(expandedId === item.id ? null : item.id);
+                    }}
+                    className="ml-2 p-1 cursor-pointer"
+                  >
+                    <FaChevronDown
+                      className={`text-sm text-gray-600 transition-transform duration-300 ${
+                        expandedId === item.id ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                )}
+              </div>
 
-              {item.options && item.options.length > 0 && (
-                <div className="pl-4">
+              {item.options && item.options.length > 0 && expandedId === item.id && (
+                <div className="pl-4 space-y-2">
                   {item.options.map((opt, i) => (
                     <Link
                       key={i}
                       to={`/${opt.toLowerCase().replace(/\s+/g,'-')}`}
-                      className="block py-1 text-sm text-gray-600"
+                      className="block py-1 text-sm text-gray-600 hover:text-gray-800"
                       onClick={() => setIsOpen(false)}
                     >
                       {opt}
