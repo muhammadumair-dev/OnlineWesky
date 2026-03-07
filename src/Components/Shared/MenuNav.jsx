@@ -72,7 +72,7 @@ function MenuNav() {
       >
 
         {/* Header */}
-        <div className="flex justify-between items-center p-4 border-b border-gray-300">
+        <div className="flex justify-between items-center py-4 px-2 gap-5 border-b border-gray-300">
           <SearchBar mobile />
           <FaTimes
             className="text-xl cursor-pointer"

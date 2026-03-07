@@ -17,7 +17,7 @@ function ProductCard({ product }) {
   };
 
   return (
-    <div className="w-[48%]  mt-8 overflow-hidden relative procard sm:w-48 md:w-62 lg:w-48 xl:w-55">
+    <div className="w-[48%] py-0 mt-8 overflow-hidden relative sm:w-48 md:w-62 lg:w-48 xl:w-55">
       <div className="relative w-full aspect-square overflow-hidden ">
         <img
           src={product.image}
