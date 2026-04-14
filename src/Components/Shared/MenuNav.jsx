@@ -11,37 +11,48 @@ function MenuNav() {
   const drinks = [
     { id: 1, selectname: "Gift Ideas", options: ["Wine", "Special Packages", "Gift Card"] }
     ,
-    { 
-      id: 2, 
+    {
+      id: 2,
       selectname: "New In"
     },
-    { 
-      id: 3, 
-      selectname: "Whisky", 
-      options: ["Gin", "Tonic", "Vodka"] 
+    {
+      id: 3,
+      selectname: "Whisky",
+      options: ["Gin", "Tonic", "Vodka"]
     },
-    { 
-      id: 4, 
-      selectname: "Gin & Tonic", 
-      options: ["Red Wine", "White Wine", "Rose"] 
+    {
+      id: 4,
+      selectname: "Gin & Tonic",
+      options: ["Red Wine", "White Wine", "Rose"]
     },
-    { 
-      id: 5, 
+    {
+      id: 5,
       selectname: "Rum & Cachaca"
     },
-    { 
-      id: 6, 
+    {
+      id: 6,
       selectname: "Vodka"
     },
-    { 
-      id: 7, 
-      selectname: "Wine & Champagne", 
-      options: ["Gin", "Tonic", "Vodka"] 
+    {
+      id: 7,
+      selectname: "Wine & Champagne",
+      options: ["Gin", "Tonic", "Vodka"]
     },
-    { 
-      id: 8, 
-      selectname: "More", 
-      options: ["Gin", "Tonic", "Vodka"] 
+    {
+      id: 8,
+      selectname: "More",
+      options: ["Gin", "Tonic", "Vodka"]
+    },
+    {
+      id: 9,
+      selectname: "Services",
+      options: [
+        "Home Repair & Handyman",
+        "Electrical Repairs",
+        "Plumbing Repairs",
+        "Property Maintenance",
+        "Installation Services"
+      ]
     }
   ];
 

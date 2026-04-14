@@ -12,6 +12,8 @@ import Sidebar from './Components/Layout/Sidebar';
 import About from './Components/Pages/About';
 import Contact from './Components/Pages/Contact';
 import Faqs from './Components/Pages/Faqs';
+import Services from './Components/Pages/Services';
+import HoustonRepairs from './Components/Pages/HoustonRepairs';
 import { createBrowserRouter, RouterProvider, Outlet, useLocation } from 'react-router-dom';
 import CartPage from './Components/Pages/CartPage';
 import CategoryPage from './Components/Pages/CategoryPage';
@@ -36,8 +38,8 @@ function App() {
     <div className="overflow-hidden">
       <Navbar />
       <NavbarSelecter />
-      {/* hide bottom banner on about/contact/faqs */}
-      {!["/about","/contact","/faqs"].includes(useLocation().pathname) && <NavbarBottom />}
+      {/* hide bottom banner on about/contact/faqs/services */}
+      {!["/about","/contact","/faqs","/services"].includes(useLocation().pathname) && <NavbarBottom />}
       <Outlet />
       <Footer />
       <div className=""> <ScrollToTopButton /> </div>
@@ -57,6 +59,8 @@ function App() {
           ))}
         </div>
       </div>
+      {/* Houston Easy Repairs Section */}
+      <HoustonRepairs />
     </div>
   );
 
@@ -69,6 +73,7 @@ function App() {
           { path: 'about', element: <About /> },
           { path: 'contact', element: <Contact /> },
           { path: 'faqs', element: <Faqs /> },
+          { path: 'services', element: <Services /> },
           { path: 'cart', element: <CartPage /> },
           { path: ':category', element: <CategoryPage /> },
       ],

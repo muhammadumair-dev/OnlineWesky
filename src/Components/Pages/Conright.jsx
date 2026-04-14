@@ -6,9 +6,19 @@ const Contight = () => {
     phone: '',
     email: '',
     orderId: '',
+    serviceRequired: '',
     message: '',
     consent: false,
   });
+
+  const serviceOptions = [
+    'Select a Service',
+    'Home Repair & Handyman Services',
+    'Electrical Repair Services',
+    'Plumbing Repair Services',
+    'Property Maintenance Services',
+    'Installation & Repair Services'
+  ];
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -73,6 +83,22 @@ const Contight = () => {
             className={inputStyles}
             onChange={handleChange}
           />
+        </div>
+
+        {/* Service Required Dropdown */}
+        <div>
+          <select
+            name="serviceRequired"
+            className={`${inputStyles} text-gray-500`}
+            value={formData.serviceRequired}
+            onChange={handleChange}
+          >
+            {serviceOptions.map((option, index) => (
+              <option key={index} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
         </div>
 
         {/* Textarea */}
